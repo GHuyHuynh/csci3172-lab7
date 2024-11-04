@@ -4,7 +4,7 @@ Lab 7: Create a simple web page using React with Tailwind CSS to display Porsche
 
 * *Date Created*: 04 NOV 2024
 * *Last Modification Date*: 04 NOV 2024
-* *Lab URL (Netlify)*: [Link](https://6728c348df9db07614cd5cd0--singular-meringue-c842ba.netlify.app/)
+* *Lab URL (Netlify)*: [Link](https://singular-meringue-c842ba.netlify.app/)
 * *GitLab URL*: [Link](https://git.cs.dal.ca/huyh/csci3172/-/tree/main/labs/lab7?ref_type=heads)
 * *GitHub URL*: [Link](https://github.com/GHuyHuynh/csci3172-lab7)
 
