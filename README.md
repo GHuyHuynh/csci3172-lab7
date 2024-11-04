@@ -4,9 +4,9 @@ Lab 7: Create a simple web page using React with Tailwind CSS to display Porsche
 
 * *Date Created*: 04 NOV 2024
 * *Last Modification Date*: 04 NOV 2024
-* *Lab URL*: [Link](https://web.cs.dal.ca/~huyh/csci3172/lab5/)
-* *GitLab URL*: [Link](https://git.cs.dal.ca/huyh/csci3172/-/tree/main/labs/lab5?ref_type=heads)
-* *GitHub URL*: [Link](
+* *Lab URL (Netlify)*: [Link](https://web.cs.dal.ca/~huyh/csci3172/lab5/)
+* *GitLab URL*: [Link](https://git.cs.dal.ca/huyh/csci3172/-/tree/main/labs/lab7?ref_type=heads)
+* *GitHub URL*: [Link](https://github.com/GHuyHuynh/csci3172-lab7)
 
 
 ## Authors
@@ -24,107 +24,47 @@ Lab 7: Create a simple web page using React with Tailwind CSS to display Porsche
 
 If in completing your lab / assignment / project you used any interpretation of someone else's code, then provide a list of where the code was implemented, how it was implemented, why it was implemented, and how it was modified. See the sections below for more details.
 
+### Install Tailwind CSS with Create React App
+from [Tailwind CSS](https://tailwindcss.com/docs/guides/create-react-app)
 
-### index.html
+#### index.css
+*Lines 1 - 3*
 
-*Lines 8 - 8*
-
-```html
-<script src="https://cdn.tailwindcss.com"></script> 
-
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
 
-The code above was created by adapting the code in [Install Tailwind CSS](<script src="https://cdn.tailwindcss.com"></script>) as shown below: 
+#### tailwind.config.js
+*Lines 1 - 10*
 
-```html
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-</body>
-</html>
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
 ```
-
 
 - <!---Why---> [Tailwind CSS](https://tailwindcss.com/)'s Code was used because I want to use Tailwind CSS for easier styling
 
 
+### Porsche 911 GT3 RS Image
+from [Porsche](https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMHIspbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmHlCgI7Zl2dioCxkF%25vUqCNwuWXsOw3meV6iTCj%25zhRc2GRdqAZ%25oD21P%25S1BAXmenugTfeIJpV7nDhQk)
 
-### File Name: `script.js`
+- Image downloaded into `src/assets/porsche.png`
 
-* Title: Determining Prime Numbers in JavaScript: Logic and Code Optimization
-* URL: (https://medium.com/@stheodorejohn/determining-prime-numbers-in-javascript-logic-and-code-optimization-14e02e1d9cad)
-* Date Accessed: October 20th, 2024
-
-
-*Lines 56 - 76*
+#### App.js
+*Lines 2*
 
 ```js
-function isPrime(number) {
-   if (number < 2) {
-      return false;
-   }
-
-   if (number === 2 || number === 3) {
-      return true;
-   }
-
-   if (number % 2 === 0 || number % 3 === 0) {
-      return false;
-   }
-
-   for (let i = 5; i * i <= number; i += 6) {
-      if (number % i === 0 || number % (i + 2) === 0) {
-      return false;
-      }
-   }
-
-   return true;
-}
+import porsche from './assets/porsche.png';
 ```
 
-The code above was created by adapting the code in [Theodore John.S](https://medium.com/@stheodorejohn/determining-prime-numbers-in-javascript-logic-and-code-optimization-14e02e1d9cad) as shown below: 
-
-```js
-function isPrimeOptimized(number) {
-  if (number < 2) {
-    return false;
-  }
-
-  if (number === 2 || number === 3) {
-    return true;
-  }
-
-  if (number % 2 === 0 || number % 3 === 0) {
-    return false;
-  }
-
-  for (let i = 5; i * i <= number; i += 6) {
-    if (number % i === 0 || number % (i + 2) === 0) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-// Usage
-const number = 17;
-console.log(`${number} is prime:`, isPrimeOptimized(number));
-```
-
-- <!---How---> The code in was implemented by Huy Huynh
-- <!---Why---> Code was used because I want to know how to make a function that can check a prime number in JavaScript
-- <!---How---> Code was modified by Huy Huynh
-
-
-## Acknowledgments
-
-* [Theodore John.S](https://medium.com/@stheodorejohn)
+- <!---Why---> I love the car and want to display it on my web page
